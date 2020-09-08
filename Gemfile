@@ -12,11 +12,14 @@ group :development do
   gem "rubocop-performance", require: false
   gem "rubocop-rails", require: false
 
-  gem "activerecord",   github: "rails/rails", branch: "master"
-  gem "ruby-plsql", github: "rsim/ruby-plsql", branch: "master"
+
+  gem "activerecord",   github: "rails/rails", branch: "master", ref: '015c393'
+  # gem "ruby-plsql", github: "rsim/ruby-plsql", branch: "master"
+  gem "ruby-plsql", github: "bjfish/ruby-plsql", branch: "truffleruby-ci"
 
   platforms :ruby do
-    gem "ruby-oci8",    github: "kubo/ruby-oci8"
+   #gem "ruby-oci8",    github: "kubo/ruby-oci8"
+    gem "ruby-oci8", git: 'https://github.com/bjfish/ruby-oci8.git', branch: 'truffleruby-ci'
     gem "byebug"
   end
 

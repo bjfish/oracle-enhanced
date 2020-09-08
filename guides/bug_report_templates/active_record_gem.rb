@@ -12,7 +12,7 @@ gemfile(true) do
   gem "minitest"
 
   platforms :ruby do
-    gem "ruby-oci8"
+    gem "ruby-oci8", git: 'https://github.com/bjfish/ruby-oci8.git', branch: 'truffleruby-ci'
   end
 end
 
